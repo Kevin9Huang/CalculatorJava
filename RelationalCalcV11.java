@@ -38,7 +38,7 @@ public class RelationalCalcV11 {
             while(!bufferoperandend){
                 if(i<len)
                 {
-                    if(ekspresi.substring(i,i+1).matches("-?\\d+(\\.\\d+)?"))
+                    if(ekspresi.substring(i,i+1).matches("0|1|2|3|4|5|6|7|8|9|-") || ekspresi.substring(i,i+1).equals("."))
                     {
                         System.out.println("ping");
                         bufferoperand += ekspresi.substring(i,i+1);
@@ -56,6 +56,7 @@ public class RelationalCalcV11 {
 
             }
             if(!bufferoperand.equalsIgnoreCase("")){
+                System.out.println("buffer " + bufferoperand);
                 operand[countoperand] = Float.parseFloat(bufferoperand);
                 bufferoperand = "";
                 countoperand++;
