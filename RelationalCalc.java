@@ -33,6 +33,7 @@ public class RelationalCalc {
 
         while(i < len)
         {
+			System.out.println("asdf");
             bufferoperatorend = false;
             bufferoperandend = false;
             while(!bufferoperandend){
@@ -83,6 +84,14 @@ public class RelationalCalc {
                 bufferoperator = "";
                 countoperator++;
             }
+			if(i<len)
+			{
+				if(ekspresi.substring(i,i+1).equals("(") || ekspresi.substring(i,i+1).equals(")"))
+				{
+					i++; //Abaikan tanda ( dan )
+				}
+				System.out.println("ping");
+			}
         }
         for(int j =0;j<=countoperand-1;j++)
         {
@@ -120,4 +129,8 @@ public class RelationalCalc {
         return val;
         /* fffuuuuuu */
     }
+	public void ConvertIntoInfix()
+	{
+		
+	}
 }

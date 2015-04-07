@@ -6,7 +6,7 @@ public class mRelationalCalc {
         while(!userinput.equalsIgnoreCase("exit"))
         {
             String val = "";
-            RelationalCalcV11 R = new RelationalCalcV11(userinput,2);
+            RelationalCalc R = new RelationalCalc(userinput,2);
             val = R.CalculateInfix();
             System.out.println(val);
             userinput=sc.nextLine();
