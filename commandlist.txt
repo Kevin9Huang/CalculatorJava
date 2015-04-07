@@ -1,0 +1,5 @@
+Show All
+ShowMem
+Undo
+Redo
+Save

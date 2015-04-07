@@ -121,4 +121,5 @@ public class RelationalCalcV11 {
         }
         return val;
     }
+    /* [0-9]|true|false|+|-|*|/|div|mod|and|or|xor */
 }
