@@ -6,10 +6,12 @@ public class mRelationalCalc {
         while(!userinput.equalsIgnoreCase("exit"))
         {
             String val = "";
-            RelationalCalc R = new RelationalCalc(userinput,2);
+            RelationalCalc R = new RelationalCalc(userinput,1);
             val = R.CalculateInfix();
             System.out.println(val);
-            userinput=sc.nextLine();
+			R.ConverttoInfix();
+			System.out.println(R.getEkspresi());
+			userinput=sc.nextLine();
         }
 
     }
