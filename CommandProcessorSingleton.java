@@ -1,12 +1,20 @@
 import java.util.*;
 
-public class CommandProcessor {
+public class CommandProcessorSingleton {
     private String command;
 
-    public CommandProcessor(String _command) {
-        command = _command;
-    }
-    public void Execute() {
+   private static CommandProcessorSingleton instance = new CommandProcessorSingleton();
+
+   private CommandProcessorSingleton(){
+       command = "";
+   }
+
+   public static CommandProcessorSingleton getInstance(String _command) {
+      instance.command = _command;
+      return instance;
+   }
+
+   public void Execute() {
         CEChecker C = new CEChecker(command);
         String com = "";
         String scount = "";
