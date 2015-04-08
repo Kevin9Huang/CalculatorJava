@@ -18,7 +18,6 @@ public class RelationalCalcV11 {
     }
 
     public String CalculateInfix() {
-        System.out.println("Asdfasdf");
         float[] operand = new float[10];
         String[] operator= new String[10];
         String val ="";
@@ -40,7 +39,6 @@ public class RelationalCalcV11 {
                 {
                     if(ekspresi.substring(i,i+1).matches("0|1|2|3|4|5|6|7|8|9|-") || ekspresi.substring(i,i+1).equals("."))
                     {
-                        System.out.println("ping");
                         bufferoperand += ekspresi.substring(i,i+1);
                         i++;
                     }
@@ -56,7 +54,6 @@ public class RelationalCalcV11 {
 
             }
             if(!bufferoperand.equalsIgnoreCase("")){
-                System.out.println("buffer " + bufferoperand);
                 operand[countoperand] = Float.parseFloat(bufferoperand);
                 bufferoperand = "";
                 countoperand++;
@@ -96,7 +93,6 @@ public class RelationalCalcV11 {
         }
         if (operator[0].equals("<")) {
             v = (operand[0] < operand[1]);
-            System.out.println("asdfasdfasdf");
         }
         else if (operator[0].equals(">")) {
             v = (operand[0] > operand[1]);
