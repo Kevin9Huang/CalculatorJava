@@ -6,12 +6,11 @@ public class mArabCalc {
         while(!userinput.equalsIgnoreCase("exit"))
         {
             float val = 0.f;
-            ArabCalc R = new ArabCalc(userinput,3,20);
-            R.CalculatePostfix();
+            ArabCalc R = new ArabCalc(userinput,2,20);
+            R.CalculateInfix();
 			val = R.getHasil();
 			System.out.println(R.getEkspresi() +" = "+val);
 			userinput=sc.nextLine();
         }
-
     }
 }

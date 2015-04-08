@@ -6,7 +6,7 @@ public class ArabCalc{
 	private int mode;
 	private float hasil;
 	private final int defaultStackSize = 30;
-	private final int defaultMode = 2; //Sufix
+	private final int defaultMode = 2; //Infix
 	public ArabCalc(){
 		bil = new Stack2<>(defaultStackSize);
 		operatorx = new Stack2<>(defaultStackSize);
@@ -47,7 +47,7 @@ public class ArabCalc{
 	public void Calculate(){
 		if(mode == 2)
 		{
-			CalculateSufix();
+			CalculateInfix();
 		}
 		/*
 		else if(mode == 2)
@@ -69,7 +69,7 @@ public class ArabCalc{
 		float popbil2 = 0.f;
 		String dumpoperator;
 		System.out.println("pop"+bil.getDataCount());
-		if(mode == 2 || mode == 3) //sufix atau postfix
+		if(mode == 2 || mode == 3) //Infix atau postfix
 		{
 			popbil1 = bil.Pop();
 			popbil2 = bil.Pop();
@@ -109,7 +109,7 @@ public class ArabCalc{
 		System.out.println("Selesai small calculate");
 		Print();
 	}
-	void CalculateSufix(){
+	void CalculateInfix(){
 		String ekspresitemp = ekspresi;
 		String bufferoperand = "";
         String bufferoperator = "";
