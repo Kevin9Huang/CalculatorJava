@@ -34,6 +34,9 @@ public class CommandProcessor {
                 com = "Proses Undo ";
             }
         }
+        else if (C.IsExpression()) {
+            com = "This is expression";
+        }
         System.out.print(com);
         if (count != 0) {
             System.out.print(count);

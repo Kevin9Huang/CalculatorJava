@@ -3,16 +3,14 @@ import java.util.*;
 public class CommandProcessorSingleton {
     private String command;
 
-   private static CommandProcessorSingleton instance;
+   private static CommandProcessorSingleton instance = new CommandProcessorSingleton();
 
-   public CommandProcessorSingleton(String _command){
-        command = _command;
+   private CommandProcessorSingleton(){
+       command = "";
    }
 
    public static CommandProcessorSingleton getInstance(String _command) {
-      if(instance == null) {
-            CommandProcessorSingleton instance = new CommandProcessorSingleton(_command);
-      }
+      instance.command = _command;
       return instance;
    }
 
