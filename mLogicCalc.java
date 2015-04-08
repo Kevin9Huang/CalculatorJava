@@ -1,14 +1,15 @@
 import java.util.*;
-public class mRelationalCalc {
+public class mLogicCalc {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         String userinput = sc.nextLine();
         while(!userinput.equalsIgnoreCase("exit"))
         {
-            String val = "";
-            RelationalCalc R = new RelationalCalc(userinput,1);
-            val = R.Calculate();
-            System.out.println(val);
+            float val = 0;
+            LogicCalc R = new LogicCalc(userinput,1,20);
+            R.CalculateSufix();
+			val = R.getHasil();
+			System.out.println(R.getEkspresi() +" = "+val);
 			userinput=sc.nextLine();
         }
 

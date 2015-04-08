@@ -8,14 +8,6 @@ public class RelationalCalc {
         mode = _mode;
     }
 
-    public String Calculate(){
-        String hasil = "";
-        if(mode == 2)
-        {
-            hasil = CalculateInfix();
-        }
-        return hasil;
-    }
 	public String getEkspresi()
 	{
 		return ekspresi;
@@ -32,7 +24,7 @@ public class RelationalCalc {
 	{
 		mode = _mode;
 	}
-    public String CalculateInfix() {
+    public String Calculate() {
         int[] operand = new int[10];
         String[] operator= new String[10];
         String val ="";
@@ -141,7 +133,6 @@ public class RelationalCalc {
             val = "False";
         }
         return val;
-        /* fffuuuuuu */
     }
 	public void ConverttoInfix()
 	{
